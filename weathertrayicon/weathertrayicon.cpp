@@ -95,7 +95,7 @@ void WeatherTrayIcon::requestXml()
 #ifdef NO_REGEX
     QString airportId = airport.right(6);
     if (airportId.startsWith("(") && airportId.endsWith(")")) {
-        QString url = QString("http://www.weather.gov/xml/"
+        QString url = QString("http://w1.weather.gov/xml/"
                 "current_obs/%1.xml").arg(airportId.mid(1, 4));
         networkXmlAccess->get(QNetworkRequest(QUrl(url)));
     }
